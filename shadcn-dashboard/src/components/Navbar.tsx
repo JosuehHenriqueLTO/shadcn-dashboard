@@ -14,12 +14,16 @@ import { LogOut, Moon, Settings, SquareMenu, Sun, User } from "lucide-react";
 import { Button } from "./ui/button";
 import Link from "next/link";
 import React from "react";
+import { SidebarTrigger, useSidebar } from "./ui/sidebar";
 
 const Navbar = () => {
   const { theme, setTheme } = useTheme();
+  // const { toggleSidebar } = useSidebar()
   return (
     <nav className="p-4 flex items-center justify-between">
-      collapseButton
+      <SidebarTrigger />
+      {/* <Button variant="outline" onClick={toggleSidebar}>Button</Button> */}
+
       <div className="flex items-center gap-4">
         <Link href="">Dashboard</Link>
         <DropdownMenu>
